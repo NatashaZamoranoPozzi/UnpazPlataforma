@@ -3,15 +3,13 @@
 
 <br />
 
-> Features
+> Caracterìsticas
 
-- Up-to-date [dependencies](./requirements.txt): **Django 3.2.6 LTS**
+- Dependencias (./requirements.txt): **Django 3.2.6 LTS**
 - [SCSS compilation](#recompile-css) via **Gulp**
 - SQLite Database, Django Native ORM
 - Modular design, clean codebase
-- Session-Based Authentication, Forms validation
 - Deployment scripts: Docker, Gunicorn / Nginx
-- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
 
 
 <br />
