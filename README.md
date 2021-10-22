@@ -1,6 +1,5 @@
-# [Django Material Lite](https://appseed.us/admin-dashboards/django-dashboard-material-lite)
+# Plataforma en Django Material
 
-Open-Source **Django Dashboard** coded with basic modules, database, ORM and deployment scripts on top of MaterialPro Bootstrap Lite, a modern Bootstrap dashboard design. [WrapPixel](https://appseed.us/agency/wrappixel)'s **MaterialPro Bootstrap Lite** is one of the best Bootstrap templates for admin dashboards and control admin panels. This powerful and competent Bootstrap 4 admin template is based on HTML and is built with the CSS framework. 
 
 <br />
 
@@ -14,75 +13,50 @@ Open-Source **Django Dashboard** coded with basic modules, database, ORM and dep
 - Deployment scripts: Docker, Gunicorn / Nginx
 - Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
 
-> Links
-
-- [Django Material Lite](https://appseed.us/admin-dashboards/django-dashboard-material-lite) - product page
-- [Django Material Lite](https://django-dashboard-material-lite.appseed.us/) - LIVE deployment
-- [Django Material Lite](https://docs.appseed.us/products/django-dashboards/materialpro-lite) - product documentation
 
 <br />
 
-## Want more? Go PRO!
 
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
-
-| [Django Material PRO Wpx](https://appseed.us/admin-dashboards/django-material-dashboard-wpx-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django Dashboard Argon PRO](https://appseed.us/admin-dashboards/django-dashboard-argon-pro) |
-| --- | --- | --- |
-| [![Django Material PRO Wpx](https://raw.githubusercontent.com/app-generator/django-material-dashboard-wpx-pro/master/media/django-material-dashboard-wpx-pro-screen.png)](https://appseed.us/admin-dashboards/django-material-dashboard-wpx-pro) | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-black-pro/master/media/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-argon-pro/master/media/django-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-argon-pro)
-
-<br />
-<br />
-
-![Django Material Lite - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-dashboard-material-lite/master/media/django-dashboard-material-lite-screen.png)
-
-<br />
-
-## How to use it
+## Como ejectuar en un host?
 
 ```bash
-$ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-material-lite.git
-$ cd django-dashboard-material-lite
+$ # Descargar código
+$ git clone https://gitlab.com/anibale11/portal-plataforma-unpaz.git
+$ cd portal-plataforma-unpaz
 $
-$ # Virtualenv modules installation (Unix based systems)
+$ # ejectuar Virtualenv en  (Unix OS/Linux OS)
 $ virtualenv env
 $ source env/bin/activate
 $
-$ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv env
-$ # .\env\Scripts\activate
+$ # ejecutar Virtualenv en (Windows OS)
+$ virtualenv env
+$ .\env\Scripts\activate
 $
-$ # Install modules - SQLite Storage
+$ # Instalar modules - SQLite
 $ pip3 install -r requirements.txt
 $
-$ # Create tables
+$ # Crear tablas
 $ python manage.py makemigrations
 $ python manage.py migrate
 $
-$ # Start the application (development mode)
+$ # Iniciar aplicación (development mode)
 $ python manage.py runserver # default port 8000
 $
-$ # Start the app - custom port
-$ # python manage.py runserver 0.0.0.0:<your_port>
+$ # Iniciar aplicación en otro puerto
+$ # python manage.py runserver 0.0.0.0:<port>
 $
-$ # Access the web app in browser: http://127.0.0.1:8000/
+$ # Acceder por browser: http://127.0.0.1:8000/
 ```
 
-> Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
+> Note: Para usar la aplicación debe registrarse, de esa manera podrá ver las páginas que necesitan logueo.
 
 <br />
 
-## Code-base structure
+## Estructura de Código
 
-The project is coded using a simple and intuitive structure presented bellow:
 
 ```bash
-< PROJECT ROOT >
-   |
-   |-- core/                               # Implements app configuration
-   |    |-- settings.py                    # Defines Global Settings
-   |    |-- wsgi.py                        # Start the app in production
-   |    |-- urls.py                        # Define URLs served by all apps/nodes
+< PROJECTO >
    |
    |-- apps/
    |    |
@@ -93,7 +67,7 @@ The project is coded using a simple and intuitive structure presented bellow:
    |    |-- authentication/                # Handles auth routes (login and register)
    |    |    |-- urls.py                   # Define authentication routes  
    |    |    |-- views.py                  # Handles login and registration  
-   |    |    |-- forms.py                  # Define auth forms (login and register) 
+   |    |    |-- forms.py                  # Define auth forms (login and register)
    |    |
    |    |-- static/
    |    |    |-- <css, JS, images>         # CSS files, Javascripts files
@@ -128,29 +102,7 @@ The project is coded using a simple and intuitive structure presented bellow:
 
 <br />
 
-> The bootstrap flow
 
-- Django bootstrapper `manage.py` uses `core/settings.py` as the main configuration file
-- `core/settings.py` loads the app magic from `.env` file
-- Redirect the guest users to Login page
-- Unlock the pages served by *app* node for authenticated users
-
-<br />
-
-## Recompile CSS
-
-To recompile SCSS files, follow this setup:
-
-<br />
-
-**Step #1** - Install tools
-
-- [NodeJS](https://nodejs.org/en/) 12.x or higher
-- [Gulp](https://gulpjs.com/) - globally 
-    - `npm install -g gulp-cli`
-- [Yarn](https://yarnpkg.com/) (optional) 
-
-<br />
 
 **Step #2** - Change the working directory to `assets` folder
 
@@ -170,7 +122,7 @@ $ yarn
 
 <br />
 
-**Step #4** - Edit & Recompile SCSS files 
+**Step #4** - Edit & Recompile SCSS files
 
 ```bash
 $ gulp scss
@@ -178,84 +130,25 @@ $ gulp scss
 
 The generated file is saved in `static/assets/css` directory.
 
-<br /> 
+<br />
 
-## Deployment
 
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
-
-### [Docker](https://www.docker.com/) execution
+### Ejecutar la aplicación en Docker (Recomendado)
 ---
 
-The application can be easily executed in a docker container. The steps:
+Puedes ejecutar la aplicación en un contenedor, con los siguientes pasos  
 
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-dashboard-material-lite.git
-$ cd django-dashboard-material-lite
+$ git clone https://gitlab.com/anibale11/portal-plataforma-unpaz.git
+$ cd portal-plataforma-unpaz
 ```
 
 > Start the app in Docker
 
 ```bash
-$ sudo docker-compose pull && sudo docker-compose build && sudo docker-compose up -d
+$ docker-compose pull && docker-compose build && docker-compose up -d
 ```
 
 Visit `http://localhost:85` in your browser. The app should be up & running.
-
-<br />
-
-### [Gunicorn](https://gunicorn.org/)
----
-
-Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
-
-> Install using pip
-
-```bash
-$ pip install gunicorn
-```
-> Start the app using gunicorn binary
-
-```bash
-$ gunicorn --bind=0.0.0.0:8001 core.wsgi:application
-Serving on http://localhost:8001
-```
-
-Visit `http://localhost:8001` in your browser. The app should be up & running.
-
-
-<br />
-
-### [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/)
----
-
-Waitress (Gunicorn equivalent for Windows) is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones that live in the Python standard library.
-
-> Install using pip
-
-```bash
-$ pip install waitress
-```
-> Start the app using [waitress-serve](https://docs.pylonsproject.org/projects/waitress/en/stable/runner.html)
-
-```bash
-$ waitress-serve --port=8001 core.wsgi:application
-Serving on http://localhost:8001
-```
-
-Visit `http://localhost:8001` in your browser. The app should be up & running.
-
-<br />
-
-## Credits & Links
-
-- [Django](https://www.djangoproject.com/) - The official website
-- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
-- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
-
-<br />
-
----
-[Django Material Lite](https://appseed.us/admin-dashboards/django-dashboard-material-lite) - Provided by **AppSeed** [App Generator](https://appseed.us/app-generator).
