@@ -102,38 +102,33 @@ $ # Acceder por browser: http://127.0.0.1:8000/
 
 <br />
 
+### Recompile CSS
 
 
-**Step #2** - Change the working directory to `assets` folder
+Step #1 - Instalar tools
 
-```bash
+NodeJS 12.x or higher
+Gulp - globally
+npm install -g gulp-cli
+Yarn (optional)
+
+Step #2 - ir a Directorio assets
+
 $ cd apps/static/assets
-```
 
-<br />
+Step #3 - Instalar modulos
 
-**Step #3** - Install modules (this will create a classic `node_modules` directory)
-
-```bash
 $ npm install
 // OR
 $ yarn
-```
 
-<br />
+Step #4 - Editar & Recompilar SCSS files
 
-**Step #4** - Edit & Recompile SCSS files
-
-```bash
 $ gulp scss
-```
+el archivo generado se guarda en static/assets/css
 
-The generated file is saved in `static/assets/css` directory.
-
-<br />
-
-
-### Ejecutar la aplicación en Docker (Recomendado)
+# Deployment
+### Ejecutar aplicación en Docker (Recomendado)
 ---
 
 Puedes ejecutar la aplicación en un contenedor, con los siguientes pasos  
