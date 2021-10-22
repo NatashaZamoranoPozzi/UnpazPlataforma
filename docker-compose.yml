@@ -1,10 +1,12 @@
 version: '3.3'
 services:
   appseed-app:
-    container_name: appseed_app
+    container_name: app
     restart: always
     env_file: .env
     build: .
+    volumes:
+      - ./apps:/apps
     networks:
       - db_network
       - web_network
