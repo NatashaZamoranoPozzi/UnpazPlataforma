@@ -132,7 +132,7 @@ el archivo generado se guarda en static/assets/css
 
 Puedes ejecutar la aplicación en un contenedor, con los siguientes pasos  
 
-> Get the code
+> Descargar el código
 
 ```bash
 $ git clone https://gitlab.com/anibale11/portal-plataforma-unpaz.git
