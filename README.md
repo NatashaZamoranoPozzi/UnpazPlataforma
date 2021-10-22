@@ -103,26 +103,27 @@ $ # Acceder por browser: http://127.0.0.1:8000/
 ### Recompile CSS
 
 
-Step #1 - Instalar tools
-
+* 1 - Instalar tools
+```
 NodeJS 12.x or higher
 Gulp - globally
 npm install -g gulp-cli
 Yarn (optional)
-
-Step #2 - ir a Directorio assets
-
+```
+* 2 - ir a Directorio assets
+```
 $ cd apps/static/assets
-
-Step #3 - Instalar modulos
-
+```
+* 3 - Instalar modulos
+```
 $ npm install
 // OR
 $ yarn
-
-Step #4 - Editar & Recompilar SCSS files
-
+```
+* 4 - Editar & Recompilar SCSS files
+```
 $ gulp scss
+```
 el archivo generado se guarda en static/assets/css
 
 # Deployment
