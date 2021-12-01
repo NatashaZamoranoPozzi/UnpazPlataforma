@@ -1776,7 +1776,7 @@ File: scss
 
 .page-wrapper {
   background: #eef5f9;
-  padding-bottom: 60px; }
+  /* padding-bottom: 60px;  Nat */}
 
 .container-fluid {
   padding: 0 30px 25px 30px; }
@@ -1788,6 +1788,7 @@ File: scss
   position: relative;
   z-index: 50;
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5); }
+
   .topbar .top-navbar {
     min-height: 70px;
     padding: 0px 15px 0 0; }
@@ -2131,16 +2132,27 @@ ul#themecolors {
   color: #67757c;
   left: 0px;
   padding: 17px 15px;
-  position: absolute;
   right: 0;
   border-top: 1px solid rgba(120, 130, 140, 0.13);
-  background: #ffffff; }
+  background: #ffffff; 
+  margin-top: 30px;
+}
 
 /*******************
  Card title
 *******************/
+/* .row {
+  display: flex;
+}
+
 .card {
-  margin-bottom: 30px; }
+  justify-content: flex-end;
+} */
+
+.card-block {
+  margin-bottom: 30px; 
+}
+  
   .card .card-subtitle {
     font-weight: 300;
     margin-bottom: 15px;
@@ -5176,6 +5188,8 @@ sidebar navigation
 When click on sidebar toggler and also for tablet
 *****************/
 @media (min-width: 768px) {
+  .navbar-collapse {
+    justify-content: flex-end;}
   .mini-sidebar .sidebar-nav #sidebarnav li {
     position: relative; }
   .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
@@ -6138,7 +6152,9 @@ File: scss
       -webkit-align-items: center; }
       .topbar .top-navbar .navbar-collapse {
         display: flex;
-        width: 100%; }
+        width: 100%; 
+        justify-content: flex-end;
+      }
       .topbar .top-navbar .navbar-nav {
         flex-direction: row; }
         .topbar .top-navbar .navbar-nav > .nav-item.show {

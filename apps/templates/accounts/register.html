@@ -50,7 +50,7 @@
         <div class="row">
 
             <!-- Column -->
-            <div class="col-lg-8 col-xlg-9 col-md-7">
+            <div class="col-lg-8 col-xlg-9 col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-block">
 
@@ -59,7 +59,7 @@
                             {% csrf_token %}
 
                             <div class="form-group">
-                                <label class="col-md-12">Username</label>
+                                <label class="col-md-12">Usuario</label>
                                 <div class="col-md-12">
                                     {{ form.username }}
                                 </div>
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-12">Password</label>
+                                <label class="col-md-12">Contraseña</label>
                                 <div class="col-md-12">
                                     {{ form.password1 }}
                                 </div>
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-12">Password Check</label>
+                                <label class="col-md-12">Repetir Contraseña</label>
                                 <div class="col-md-12">
                                     {{ form.password2 }}
                                 </div>

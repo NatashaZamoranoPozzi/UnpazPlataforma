@@ -58,14 +58,18 @@
 
         {% include 'includes/sidebar.html' %}
 
-        <div class="page-wrapper">
+        
+        <div 
+        {% if request.user.is_authenticated %}
+            class="page-wrapper"
+        {% endif %}>
 
             {% block content %}{% endblock content %}
 
             {% include 'includes/footer.html' %}
 
         </div>
-
+        
     </div>
 
     {% include 'includes/scripts.html' %}
@@ -75,3 +79,6 @@
 
 </body>
 </html>
+
+
+
